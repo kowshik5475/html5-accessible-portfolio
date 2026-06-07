@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | DHULI KOWSHIK</title>
+
+  <meta name="description" content="Get in touch with DHULI KOWSHIK — open to internships, collaborations, and project discussions.">
+  <meta name="theme-color" content="#7c3aed">
+
+  <link rel="canonical" href="https://dhulikowshik.dev/contact.html">
+
+  <meta property="og:title" content="Contact | DHULI KOWSHIK">
+  <meta property="og:description" content="Get in touch with DHULI KOWSHIK — open to internships, collaborations, and project discussions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dhulikowshik.dev/contact.html">
+  <meta property="og:image" content="https://dhulikowshik.dev/images/preview.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | DHULI KOWSHIK">
+  <meta name="twitter:description" content="Get in touch with DHULI KOWSHIK — open to internships, collaborations, and project discussions.">
+  <meta name="twitter:image" content="https://dhulikowshik.dev/images/preview.jpg">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <a href="index.html" class="logo" aria-label="DHULI KOWSHIK — Home">D.K.</a>
+    <nav aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="page-hero">
+      <div class="container">
+        <h1>Contact Me</h1>
+        <p>Open to internships, collaborations, and project discussions.</p>
+      </div>
+    </div>
+
+    <div class="contact-layout">
+
+      <p>
+        Have an internship opportunity, a project idea, or just want to connect?
+        Fill in the form below and I&rsquo;ll get back to you as soon as I can.
+      </p>
+
+      <section class="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading">Send a Message</h2>
+
+        <p id="form-help" class="form-help">
+          Fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.
+        </p>
+
+        <div
+          id="success-message"
+          class="success-message"
+          role="status"
+          aria-live="polite"
+          tabindex="-1"
+        >
+          <h2>Message Sent!</h2>
+          <p>Thanks for reaching out. I&rsquo;ll get back to you shortly.</p>
+          <button type="button" class="btn-reset" onclick="resetForm()">Send another message</button>
+        </div>
+
+        <form
+          id="contact-form"
+          aria-label="Contact Form"
+          aria-describedby="form-help"
+          novalidate
+          onsubmit="handleSubmit(event)"
+        >
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                aria-required="true"
+                autocomplete="name"
+                aria-describedby="name-error"
+                placeholder="e.g. DHULI KOWSHIK"
+              >
+              <span id="name-error" class="error-msg" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                aria-required="true"
+                autocomplete="email"
+                aria-describedby="email-error"
+                placeholder="you@example.com"
+              >
+              <span id="email-error" class="error-msg" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              aria-required="true"
+              aria-describedby="subject-error"
+              placeholder="e.g. Internship Opportunity"
+            >
+            <span id="subject-error" class="error-msg" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              aria-required="true"
+              aria-describedby="message-error"
+              placeholder="Hi DHULI, I'd like to discuss..."
+            ></textarea>
+            <span id="message-error" class="error-msg" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DHULI KOWSHIK. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function validate() {
+      var valid = true;
+      var fields = [
+        { id: "name",    errId: "name-error",    min: 2,  label: "Full Name",      type: "text" },
+        { id: "email",   errId: "email-error",   min: 0,  label: "Email Address",  type: "email" },
+        { id: "subject", errId: "subject-error", min: 5,  label: "Subject",        type: "text" },
+        { id: "message", errId: "message-error", min: 10, label: "Message",        type: "text" }
+      ];
+      fields.forEach(function(f) {
+        var el  = document.getElementById(f.id);
+        var err = document.getElementById(f.errId);
+        var val = el.value.trim();
+        var msg = "";
+        if (!val) {
+          msg = f.label + " is required.";
+        } else if (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+          msg = "Please enter a valid email address.";
+        } else if (f.min && val.length < f.min) {
+          msg = f.label + " must be at least " + f.min + " characters.";
+        }
+        err.textContent = msg;
+        el.setAttribute("aria-invalid", msg ? "true" : "false");
+        if (msg) valid = false;
+      });
+      return valid;
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      if (!validate()) return;
+      document.getElementById("contact-form").style.display = "none";
+      var s = document.getElementById("success-message");
+      s.classList.add("visible");
+      s.focus();
+    }
+
+    function resetForm() {
+      var form = document.getElementById("contact-form");
+      form.reset();
+      form.style.display = "flex";
+      document.getElementById("success-message").classList.remove("visible");
+      document.querySelectorAll(".error-msg").forEach(function(el) { el.textContent = ""; });
+      document.querySelectorAll("input, textarea").forEach(function(el) { el.removeAttribute("aria-invalid"); });
+      document.getElementById("name").focus();
+    }
+  </script>
+
+</body>
+</html>
