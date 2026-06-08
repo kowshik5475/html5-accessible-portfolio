@@ -1,66 +1,117 @@
-# HTML5 Semantic Structure & Accessibility Portfolio
+# Advanced CSS3 & Responsive Architecture Portfolio
 
 ## Overview
 
-This project is a multi-page personal portfolio website developed using modern Semantic HTML5 and WCAG accessibility principles. The goal of the project is to create a portfolio structure that is accessible, SEO-friendly, keyboard navigable, and compliant with web accessibility standards.
+This project is a modern multi-page portfolio website built using Semantic HTML5, Advanced CSS3, CSS Grid, Flexbox, responsive design principles, and accessibility best practices.
+
+The portfolio is designed to provide a visually appealing, fully responsive user experience while maintaining strong accessibility standards and modern frontend development practices.
+
+---
 
 ## Features
 
-### Semantic HTML5 Structure
+### Advanced CSS3
 
-* Header, Navigation, Main Content, Sections, Articles, Aside, and Footer
-* Logical document hierarchy
-* Proper heading structure (H1–H3)
+* CSS Variables for theme management
+* Smooth transitions and animations
+* Glassmorphism-inspired UI elements
+* Modern hover effects and micro-interactions
+* Responsive typography using CSS techniques
 
-### Accessibility (WCAG)
+### CSS Grid Layouts
 
-* Skip-to-content link
-* Keyboard navigable interface
-* Accessible focus indicators
+* Responsive project showcase grid
+* Flexible content layouts
+* Auto-fit and auto-fill grid implementations
+* Adaptive page structures for different screen sizes
+
+### Flexbox Components
+
+* Navigation alignment
+* Hero section layouts
+* Button groups
+* Card layouts
+* Contact section organization
+
+### Responsive Architecture
+
+* Mobile-first design approach
+* Responsive breakpoints for mobile, tablet, and desktop
+* Flexible containers and layouts
+* Responsive images and media
+* Mobile navigation menu
+
+### Dark & Light Theme
+
+* Dynamic theme switching
+* CSS custom properties (variables)
+* Local Storage theme persistence
+* System preference detection support
+
+### Accessibility
+
+* Semantic HTML5 structure
+* Skip navigation links
+* Keyboard navigation support
+* Focus-visible indicators
 * ARIA labels and attributes
-* Screen-reader friendly navigation
-* Accessible form validation and feedback
-* Proper form labels and descriptions
+* Accessible forms and validation
+* Screen-reader friendly components
 
-### SEO Optimization
+### Performance & UX
 
-* Unique page titles
-* Meta descriptions
-* Canonical URLs
-* Open Graph metadata
-* Twitter Card metadata
-* Structured data (JSON-LD)
+* Smooth scrolling
+* Responsive animations
+* Optimized layouts
+* Modern UI components
+* Cross-browser compatibility
 
-### Responsive Design
-
-* Mobile-friendly layout
-* Flexible content sections
-* Responsive navigation
+---
 
 ## Website Pages
 
 ### Home Page
 
-Introduces the portfolio owner and highlights skills, expertise, and featured projects.
+* Hero section
+* Areas of expertise
+* Featured projects
+* Call-to-action sections
 
 ### About Page
 
-Provides background information, education details, learning journey, and technical skills.
+* Personal background
+* Education information
+* Experience timeline
+* Technical skills showcase
 
 ### Projects Page
 
-Showcases selected web development projects and technical work.
+* Responsive project grid
+* Project cards
+* Technology tags
+* Project descriptions
 
 ### Contact Page
 
-Includes an accessible contact form with validation and keyboard support.
+* Accessible contact form
+* Client-side validation
+* Contact information
+* Success feedback system
+
+---
 
 ## Technologies Used
 
 * HTML5
 * CSS3
+* CSS Grid
+* Flexbox
+* JavaScript (ES6)
+* CSS Variables
 * ARIA Accessibility Standards
 * WCAG Guidelines
+
+---
 
 ## Project Structure
 
@@ -74,28 +125,38 @@ portfolio-website/
 
 ├── contact.html
 
-├── css/
+├── style.css
 
-│ └── style.css
+├── main.js
 
 └── README.md
 
-## Accessibility Highlights
+---
 
-* Semantic HTML landmarks
-* ARIA labels for navigation and forms
-* Skip navigation link
-* Keyboard accessibility
-* Focus management
-* Screen-reader compatibility
-* Accessible error messaging
+## Key Highlights
+
+* Fully Responsive Design
+* CSS Grid Architecture
+* Flexbox Layout System
+* Dark/Light Theme Toggle
+* Mobile-First Development
+* Accessibility Focused
+* Semantic HTML5
+* Modern UI Design
+* Responsive Navigation
+* Cross-Device Compatibility
+
+---
 
 ## Expected Outcome
 
-A fully accessible and semantic portfolio website designed to achieve high Lighthouse Accessibility and SEO scores while following modern web development best practices.
+A pixel-perfect, highly responsive portfolio website that adapts seamlessly across mobile, tablet, and desktop devices while demonstrating advanced CSS3 techniques, modern layout architectures, accessibility compliance, and professional frontend development practices.
+
+---
 
 ## Author
 
 DHULI KOWSHIK
 
 B.Tech Computer Science & Engineering (2024–2028)
+
