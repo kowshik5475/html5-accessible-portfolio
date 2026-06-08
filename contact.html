@@ -3,26 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Contact | DHULI KOWSHIK</title>
-
   <meta name="description" content="Get in touch with DHULI KOWSHIK — open to internships, collaborations, and project discussions.">
   <meta name="theme-color" content="#7c3aed">
-
-  <link rel="canonical" href="https://dhulikowshik.dev/contact.html">
-
-  <meta property="og:title" content="Contact | DHULI KOWSHIK">
-  <meta property="og:description" content="Get in touch with DHULI KOWSHIK — open to internships, collaborations, and project discussions.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dhulikowshik.dev/contact.html">
-  <meta property="og:image" content="https://dhulikowshik.dev/images/preview.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact | DHULI KOWSHIK">
-  <meta name="twitter:description" content="Get in touch with DHULI KOWSHIK — open to internships, collaborations, and project discussions.">
-  <meta name="twitter:image" content="https://dhulikowshik.dev/images/preview.jpg">
-
-  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -30,122 +20,157 @@
 
   <header>
     <a href="index.html" class="logo" aria-label="DHULI KOWSHIK — Home">D.K.</a>
-    <nav aria-label="Primary Navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+    </div>
   </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
 
   <main id="main-content" tabindex="-1">
 
     <div class="page-hero">
       <div class="container">
-        <h1>Contact Me</h1>
-        <p>Open to internships, collaborations, and project discussions.</p>
+        <h1 class="animate-fade-up">Contact Me</h1>
+        <p class="animate-fade-up delay-1">Open to internships, collaborations, and project discussions.</p>
       </div>
     </div>
 
-    <div class="contact-layout">
+    <div class="contact-layout container">
 
-      <p>
+      <p style="color:var(--muted);font-size:1.05rem;max-width:36rem;line-height:1.8;" class="reveal">
         Have an internship opportunity, a project idea, or just want to connect?
         Fill in the form below and I&rsquo;ll get back to you as soon as I can.
       </p>
 
-      <section class="form-section" aria-labelledby="form-heading">
-        <h2 id="form-heading">Send a Message</h2>
+      <div class="contact-grid">
 
-        <p id="form-help" class="form-help">
-          Fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.
-        </p>
+        <!-- Info sidebar -->
+        <div class="info-col">
+          <div class="contact-info-card reveal">
+            <div class="icon-circle" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p>hello@example.com</p>
+            </div>
+          </div>
 
-        <div
-          id="success-message"
-          class="success-message"
-          role="status"
-          aria-live="polite"
-          tabindex="-1"
-        >
-          <h2>Message Sent!</h2>
-          <p>Thanks for reaching out. I&rsquo;ll get back to you shortly.</p>
-          <button type="button" class="btn-reset" onclick="resetForm()">Send another message</button>
+          <div class="contact-info-card reveal delay-1">
+            <div class="icon-circle" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <p>India</p>
+            </div>
+          </div>
         </div>
 
-        <form
-          id="contact-form"
-          aria-label="Contact Form"
-          aria-describedby="form-help"
-          novalidate
-          onsubmit="handleSubmit(event)"
-        >
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Full Name <span class="req" aria-hidden="true">*</span></label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                aria-required="true"
-                autocomplete="name"
-                aria-describedby="name-error"
-                placeholder="e.g. DHULI KOWSHIK"
-              >
-              <span id="name-error" class="error-msg" role="alert" aria-live="polite"></span>
+        <!-- Form -->
+        <div class="form-card reveal delay-2">
+          <h2>Send a Message</h2>
+          <p class="form-desc">
+            Fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.
+          </p>
+
+          <div
+            id="success-message"
+            class="success-message"
+            role="status"
+            aria-live="polite"
+            tabindex="-1"
+          >
+            <div class="success-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h2>Message Sent!</h2>
+            <p>Thanks for reaching out. I&rsquo;ll get back to you shortly.</p>
+            <button type="button" class="btn-reset" onclick="resetContactForm()">Send another message</button>
+          </div>
+
+          <form
+            id="contact-form"
+            aria-label="Contact form"
+            novalidate
+          >
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  type="text" id="name" name="name"
+                  required aria-required="true"
+                  autocomplete="name"
+                  aria-describedby="name-error"
+                  placeholder="e.g. DHULI KOWSHIK"
+                >
+                <span id="name-error" class="error-msg" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  type="email" id="email" name="email"
+                  required aria-required="true"
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                  placeholder="you@example.com"
+                >
+                <span id="email-error" class="error-msg" role="alert" aria-live="polite"></span>
+              </div>
             </div>
 
             <div class="field">
-              <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+              <label for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                aria-required="true"
-                autocomplete="email"
-                aria-describedby="email-error"
-                placeholder="you@example.com"
+                type="text" id="subject" name="subject"
+                required aria-required="true"
+                aria-describedby="subject-error"
+                placeholder="e.g. Internship Opportunity"
               >
-              <span id="email-error" class="error-msg" role="alert" aria-live="polite"></span>
+              <span id="subject-error" class="error-msg" role="alert" aria-live="polite"></span>
             </div>
-          </div>
 
-          <div class="field">
-            <label for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              aria-required="true"
-              aria-describedby="subject-error"
-              placeholder="e.g. Internship Opportunity"
-            >
-            <span id="subject-error" class="error-msg" role="alert" aria-live="polite"></span>
-          </div>
+            <div class="field">
+              <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea
+                id="message" name="message"
+                rows="6"
+                required aria-required="true"
+                aria-describedby="message-error"
+                placeholder="Hi DHULI, I'd like to discuss..."
+              ></textarea>
+              <span id="message-error" class="error-msg" role="alert" aria-live="polite"></span>
+            </div>
 
-          <div class="field">
-            <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              aria-required="true"
-              aria-describedby="message-error"
-              placeholder="Hi DHULI, I'd like to discuss..."
-            ></textarea>
-            <span id="message-error" class="error-msg" role="alert" aria-live="polite"></span>
-          </div>
+            <button type="submit" class="btn-submit">
+              <span class="spinner" hidden aria-hidden="true"></span>
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              <span class="btn-text">Send Message</span>
+            </button>
+          </form>
 
-          <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-      </section>
-
+        </div>
+      </div>
     </div>
 
   </main>
@@ -154,53 +179,6 @@
     <p>&copy; 2026 DHULI KOWSHIK. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    function validate() {
-      var valid = true;
-      var fields = [
-        { id: "name",    errId: "name-error",    min: 2,  label: "Full Name",      type: "text" },
-        { id: "email",   errId: "email-error",   min: 0,  label: "Email Address",  type: "email" },
-        { id: "subject", errId: "subject-error", min: 5,  label: "Subject",        type: "text" },
-        { id: "message", errId: "message-error", min: 10, label: "Message",        type: "text" }
-      ];
-      fields.forEach(function(f) {
-        var el  = document.getElementById(f.id);
-        var err = document.getElementById(f.errId);
-        var val = el.value.trim();
-        var msg = "";
-        if (!val) {
-          msg = f.label + " is required.";
-        } else if (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-          msg = "Please enter a valid email address.";
-        } else if (f.min && val.length < f.min) {
-          msg = f.label + " must be at least " + f.min + " characters.";
-        }
-        err.textContent = msg;
-        el.setAttribute("aria-invalid", msg ? "true" : "false");
-        if (msg) valid = false;
-      });
-      return valid;
-    }
-
-    function handleSubmit(e) {
-      e.preventDefault();
-      if (!validate()) return;
-      document.getElementById("contact-form").style.display = "none";
-      var s = document.getElementById("success-message");
-      s.classList.add("visible");
-      s.focus();
-    }
-
-    function resetForm() {
-      var form = document.getElementById("contact-form");
-      form.reset();
-      form.style.display = "flex";
-      document.getElementById("success-message").classList.remove("visible");
-      document.querySelectorAll(".error-msg").forEach(function(el) { el.textContent = ""; });
-      document.querySelectorAll("input, textarea").forEach(function(el) { el.removeAttribute("aria-invalid"); });
-      document.getElementById("name").focus();
-    }
-  </script>
-
+  <script src="main.js"></script>
 </body>
 </html>

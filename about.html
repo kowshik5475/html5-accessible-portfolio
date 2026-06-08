@@ -3,26 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>About | DHULI KOWSHIK — CSE Student</title>
-
   <meta name="description" content="Learn about DHULI KOWSHIK — B.Tech CSE student (2024–2028) interested in web development, software engineering, and AI technologies.">
   <meta name="theme-color" content="#7c3aed">
-
-  <link rel="canonical" href="https://dhulikowshik.dev/about.html">
-
-  <meta property="og:title" content="About | DHULI KOWSHIK — CSE Student">
-  <meta property="og:description" content="B.Tech CSE student (2024–2028) interested in web development, software engineering, and AI technologies.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dhulikowshik.dev/about.html">
-  <meta property="og:image" content="https://dhulikowshik.dev/images/preview.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About | DHULI KOWSHIK — CSE Student">
-  <meta name="twitter:description" content="B.Tech CSE student (2024–2028) interested in web development, software engineering, and AI technologies.">
-  <meta name="twitter:image" content="https://dhulikowshik.dev/images/preview.jpg">
-
-  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -30,32 +20,51 @@
 
   <header>
     <a href="index.html" class="logo" aria-label="DHULI KOWSHIK — Home">D.K.</a>
-    <nav aria-label="Primary Navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+    </div>
   </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <main id="main-content" tabindex="-1">
 
     <div class="page-hero">
       <div class="container">
-        <h1>About Me</h1>
-        <p>B.Tech CSE Student &bull; Aspiring Frontend Developer &bull; Problem Solver</p>
+        <h1 class="animate-fade-up">About Me</h1>
+        <p class="animate-fade-up delay-1">B.Tech CSE Student &bull; Aspiring Frontend Developer &bull; Problem Solver</p>
       </div>
     </div>
 
-    <div class="about-layout">
+    <div class="about-layout container">
 
       <!-- Main column -->
       <div>
 
-        <section class="about-section" aria-labelledby="background-heading">
-          <h2 id="background-heading">Background</h2>
+        <!-- Background -->
+        <section class="about-section reveal" aria-labelledby="heading-background">
+          <h2 id="heading-background">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Background
+          </h2>
           <p>
             I am a B.Tech Computer Science and Engineering student with an interest
             in web development and software engineering. I enjoy building responsive
@@ -68,13 +77,17 @@
           </p>
         </section>
 
-        <section class="about-section" aria-labelledby="experience-heading">
-          <h2 id="experience-heading">Experience &amp; Learning</h2>
-          <ul class="timeline" aria-label="Experience timeline">
+        <!-- Experience -->
+        <section class="about-section reveal" aria-labelledby="heading-experience">
+          <h2 id="heading-experience">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Experience &amp; Learning
+          </h2>
+          <ol class="timeline" aria-label="Experience timeline">
             <li>
               <article>
-                <h3>Frontend Development Intern</h3>
                 <p class="meta">CodeAlpha &nbsp;&bull;&nbsp; 2026</p>
+                <h3>Frontend Development Intern</h3>
                 <p>
                   Worked on frontend projects using HTML, CSS, and JavaScript while
                   improving practical web development skills. Contributed to building
@@ -84,8 +97,8 @@
             </li>
             <li>
               <article>
-                <h3>AI &amp; ML Learning Program</h3>
                 <p class="meta">Self-directed &nbsp;&bull;&nbsp; 2026</p>
+                <h3>AI &amp; ML Learning Program</h3>
                 <p>
                   Explored machine learning concepts and Python-based AI development.
                   Completed hands-on exercises in data processing, model training, and
@@ -93,16 +106,19 @@
                 </p>
               </article>
             </li>
-          </ul>
+          </ol>
         </section>
 
-        <section class="about-section" aria-labelledby="skills-heading">
-          <h2 id="skills-heading">Technical Skills</h2>
-          <div style="display:flex;flex-direction:column;gap:1rem;">
-
+        <!-- Skills -->
+        <section class="about-section reveal" aria-labelledby="heading-skills">
+          <h2 id="heading-skills">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Technical Skills
+          </h2>
+          <div class="skill-groups">
             <div>
-              <h3 style="font-size:.9rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Web</h3>
-              <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+              <p class="skill-group-label">Web</p>
+              <div class="tags-row">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
                 <span class="tag">JavaScript</span>
@@ -110,10 +126,9 @@
                 <span class="tag">WCAG / ARIA</span>
               </div>
             </div>
-
             <div>
-              <h3 style="font-size:.9rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Programming</h3>
-              <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+              <p class="skill-group-label">Programming</p>
+              <div class="tags-row">
                 <span class="tag">Python</span>
                 <span class="tag">Java</span>
                 <span class="tag">C</span>
@@ -121,17 +136,15 @@
                 <span class="tag">Algorithms</span>
               </div>
             </div>
-
             <div>
-              <h3 style="font-size:.9rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Tools</h3>
-              <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+              <p class="skill-group-label">Tools</p>
+              <div class="tags-row">
                 <span class="tag">Git</span>
                 <span class="tag">GitHub</span>
                 <span class="tag">VS Code</span>
                 <span class="tag">Linux</span>
               </div>
             </div>
-
           </div>
         </section>
 
@@ -140,38 +153,42 @@
       <!-- Sidebar -->
       <aside aria-label="Quick facts" class="sidebar">
 
-        <div class="info-card">
-          <h2 id="education-heading">Education</h2>
+        <div class="info-card reveal">
+          <div class="card-accent"></div>
+          <h2>Education</h2>
           <h3>B.Tech — Computer Science &amp; Engineering</h3>
-          <p>College Name - Vignan's lara </p>
+          <p>Your College Name</p>
           <p class="date">2024 &ndash; 2028</p>
-          <hr class="divider">
           <div class="tags-row">
             <span class="tag">CSE</span>
             <span class="tag">Full-time</span>
           </div>
         </div>
 
-        <div class="info-card">
-          <h2>Currently</h2>
-          <p style="font-size:.9rem;color:var(--muted);line-height:1.6;">
-            &#128218; &nbsp;Second-year B.Tech CSE student<br>
-            &#128187; &nbsp;Building frontend projects<br>
-            &#129504; &nbsp;Learning DSA &amp; Python<br>
-            &#127757; &nbsp;Open to internships
-          </p>
+        <div class="info-card reveal">
+          <h2 style="display:flex;align-items:center;gap:.5rem;">
+            <span class="pulse" aria-hidden="true"></span> Currently
+          </h2>
+          <ul class="currently-list">
+            <li>Second-year B.Tech CSE student</li>
+            <li>Building frontend projects</li>
+            <li>Learning DSA &amp; Python</li>
+            <li>Open to internships</li>
+          </ul>
         </div>
 
-        <div class="info-card">
+        <div class="info-card connect-card reveal">
           <h2>Connect</h2>
-          <p style="font-size:.875rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;">
+          <p style="font-size:.875rem;color:var(--muted);margin-bottom:1rem;line-height:1.65;">
             I&rsquo;m actively looking for internship opportunities and open-source collaborations.
           </p>
-          <a href="contact.html" class="btn btn--primary btn--full">Send a Message</a>
+          <a href="contact.html" class="btn btn--primary btn--full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:.4rem"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Send a Message
+          </a>
         </div>
 
       </aside>
-
     </div>
 
   </main>
@@ -180,5 +197,6 @@
     <p>&copy; 2026 DHULI KOWSHIK. All Rights Reserved.</p>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>

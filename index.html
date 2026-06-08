@@ -3,42 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>DHULI KOWSHIK | CSE Student &amp; Frontend Developer</title>
-
   <meta name="description" content="DHULI KOWSHIK is a B.Tech CSE student building accessible and responsive web applications while exploring frontend development, problem solving, and AI technologies.">
-  <meta name="keywords" content="DHULI KOWSHIK, CSE Student, Frontend Developer, HTML5, CSS3, JavaScript, Python, Web Development Portfolio">
   <meta name="author" content="DHULI KOWSHIK">
   <meta name="theme-color" content="#7c3aed">
-
-  <link rel="canonical" href="https://dhulikowshik.dev/">
-
   <meta property="og:title" content="DHULI KOWSHIK | CSE Student &amp; Frontend Developer">
-  <meta property="og:description" content="B.Tech CSE student building accessible and responsive web applications while exploring frontend development, problem solving, and AI technologies.">
+  <meta property="og:description" content="B.Tech CSE student building accessible and responsive web applications.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dhulikowshik.dev/">
-  <meta property="og:image" content="https://dhulikowshik.dev/images/preview.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DHULI KOWSHIK | CSE Student &amp; Frontend Developer">
-  <meta name="twitter:description" content="B.Tech CSE student building accessible and responsive web applications.">
-  <meta name="twitter:image" content="https://dhulikowshik.dev/images/preview.jpg">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "DHULI KOWSHIK",
-    "jobTitle": "CSE Student & Frontend Developer",
-    "url": "https://dhulikowshik.dev",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Your College Name"
-    }
-  }
+  <script>
+    /* Apply saved theme before paint to avoid flash */
+    (function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();
   </script>
-
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -46,62 +25,87 @@
 
   <header>
     <a href="index.html" class="logo" aria-label="DHULI KOWSHIK — Home">D.K.</a>
-    <nav aria-label="Primary Navigation">
-      <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Switch to dark mode" title="Toggle theme">
+        <!-- Icon injected by main.js -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+    </div>
   </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <main id="main-content" tabindex="-1">
 
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-heading">
-      <span class="hero__badge">Open to Internships &amp; Collaborations</span>
-      <h1 id="hero-heading">DHULI KOWSHIK</h1>
-      <p class="hero__sub-title">Computer Science Engineering Student</p>
-      <p class="hero__desc">
+      <span class="hero__badge animate-fade-up">Open to Internships &amp; Collaborations</span>
+      <h1 id="hero-heading" class="animate-fade-up delay-1">DHULI KOWSHIK</h1>
+      <p class="hero__subtitle animate-fade-up delay-2">Computer Science Engineering Student</p>
+      <p class="hero__desc animate-fade-up delay-2">
         Building accessible and responsive web applications while exploring
         frontend development, problem solving, and AI technologies.
       </p>
-      <div class="hero__btns">
-        <a href="about.html" class="btn btn--primary">About Me</a>
+      <div class="hero__btns animate-fade-up delay-3">
+        <a href="about.html"    class="btn btn--primary">About Me</a>
         <a href="projects.html" class="btn btn--outline">View Projects</a>
-        <a href="contact.html" class="btn btn--outline">Contact</a>
+        <a href="contact.html"  class="btn btn--outline">Contact</a>
       </div>
     </section>
 
-    <!-- Expertise -->
+    <!-- Areas of Focus -->
     <section class="expertise" aria-labelledby="expertise-heading">
       <div class="container">
-        <div class="section-rule">
-          <h2 id="expertise-heading">Expertise</h2>
+        <div class="section-header reveal">
+          <h2 id="expertise-heading">Areas of Focus</h2>
+          <div class="section-rule-line"></div>
         </div>
         <div class="expertise-grid">
 
-          <div class="expertise-card">
-            <div class="expertise-card__icon" aria-hidden="true">&#127760;</div>
+          <div class="expertise-card reveal delay-1">
+            <div class="expertise-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            </div>
             <h3>Web Development</h3>
             <p>HTML5, CSS3, JavaScript</p>
           </div>
 
-          <div class="expertise-card">
-            <div class="expertise-card__icon" aria-hidden="true">&#128187;</div>
+          <div class="expertise-card reveal delay-2">
+            <div class="expertise-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+            </div>
             <h3>Programming</h3>
             <p>Python, Java</p>
           </div>
 
-          <div class="expertise-card">
-            <div class="expertise-card__icon" aria-hidden="true">&#129504;</div>
+          <div class="expertise-card reveal delay-3">
+            <div class="expertise-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
             <h3>Problem Solving</h3>
             <p>Data Structures &amp; Algorithms</p>
           </div>
 
-          <div class="expertise-card">
-            <div class="expertise-card__icon" aria-hidden="true">&#9855;</div>
+          <div class="expertise-card reveal delay-4">
+            <div class="expertise-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
             <h3>Accessibility</h3>
             <p>Semantic HTML, WCAG, ARIA</p>
           </div>
@@ -110,19 +114,26 @@
       </div>
     </section>
 
-    <!-- Featured Projects preview -->
-    <section aria-labelledby="featured-heading" style="background: var(--secondary-bg); padding: 4.5rem 0;">
+    <!-- Featured Projects -->
+    <section class="featured" aria-labelledby="featured-heading">
       <div class="container">
-        <div class="section-rule">
-          <h2 id="featured-heading">Featured Projects</h2>
+        <div class="featured-header reveal">
+          <div>
+            <h2 id="featured-heading">Featured Projects</h2>
+            <div class="section-rule-line"></div>
+          </div>
+          <a href="projects.html">View All Projects &rarr;</a>
         </div>
-        <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem; margin-bottom:2rem;">
 
-          <article class="project-card">
-            <div class="project-card__thumb" aria-hidden="true">&#128247;</div>
+        <div class="projects-grid">
+
+          <article class="project-card reveal delay-1">
+            <div class="project-card__thumb" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--muted)"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+            </div>
             <div class="project-card__body">
               <h3>Image Gallery Website</h3>
-              <p>Responsive image gallery built with HTML, CSS, and JavaScript featuring a lightbox viewer and keyboard navigation.</p>
+              <p>Responsive image gallery with a lightbox viewer, keyboard navigation, and a CSS Grid layout that adapts to all screen sizes.</p>
               <div class="project-card__tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
@@ -131,11 +142,13 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-card__thumb" aria-hidden="true">&#128203;</div>
+          <article class="project-card reveal delay-2">
+            <div class="project-card__thumb" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--muted)"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+            </div>
             <div class="project-card__body">
               <h3>Task Manager Application</h3>
-              <p>Web-based task manager for organising daily activities with priority labels, due dates, and local storage persistence.</p>
+              <p>Web-based task manager with priority labels, due dates, and local storage persistence for organising daily activities.</p>
               <div class="project-card__tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
@@ -144,11 +157,13 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-card__thumb" aria-hidden="true">&#128100;</div>
+          <article class="project-card reveal delay-3">
+            <div class="project-card__thumb" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--muted)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
             <div class="project-card__body">
               <h3>Student Portfolio Website</h3>
-              <p>Personal portfolio developed with semantic HTML5, WCAG accessibility standards, ARIA attributes, and SEO best practices.</p>
+              <p>Personal portfolio with semantic HTML5, WCAG 2.1 AA compliance, ARIA attributes, and keyboard-navigable contact form.</p>
               <div class="project-card__tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
@@ -157,9 +172,6 @@
             </div>
           </article>
 
-        </div>
-        <div style="text-align:center;">
-          <a href="projects.html" class="btn btn--primary">View All Projects</a>
         </div>
       </div>
     </section>
@@ -170,5 +182,6 @@
     <p>&copy; 2026 DHULI KOWSHIK. All Rights Reserved.</p>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
